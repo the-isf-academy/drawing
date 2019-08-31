@@ -47,6 +47,9 @@ Here's an example:
         points = square_with_points(30)
         add_perspective(points, [0, 100], 0.3)
 
+By the way, if you defined objects with 3-d coordinates, you could draw the whole scene using
+`add_perspective` and converting the z-coordinate to a `depth` value between 0 and 1. Could be fun!
+
 ## lines
 
 The `lines` module contains helpers that change how the turtle draws. Each of these is a context manager, 
