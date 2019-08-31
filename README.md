@@ -6,8 +6,46 @@ This `package` contains several modules full of useful (or amusing) functions. H
 
 The `shapes` module contains functions which draw some fancy shapes. Enjoy!
 
-### star
-`star` takes three arguments: `inner_radius`, `outer_radius`, and `number_of_points`. Then it draws the 
+### `block_a(height)`
+Draws the letter A with the given height, and returns the width of the letter.
+
+### `block_b(height)`
+Draws the letter B with the given height, and returns the width of the letter.
+
+### `block_c(height)`
+Draws the letter C with the given height, and returns the width of the letter.
+
+Using these letter functions, you can spell out words (It would be nice to have more letters!): 
+
+    :::python
+    height = 100
+    kerning = 10
+    for letter_function in [block_a, block_b, block_c]:
+        spacing = letter_function(height)
+        penup()
+        forward(spacing + kerning)
+        pendown()
+
+### `fancy_star(inner_radius, outer_radius, number_of_points)`
+`fancy_star` takes three arguments: `inner_radius`, `outer_radius`, and `number_of_points`. Then it draws
+a zig-zag between points on an inner and outer circle.
+
+### `square_with_points(size)`
+Works just like a regular square, but returns a list of the vertices. For example, 
+
+    >>> points = square_with_points(100)
+    >>> points
+    [(-0.00,-0.00), (100.00,0.00), (100.00,-100.00), (0.00,-100.00)]
+
+### `add_perspective(points, origin, depth)`
+Projects `points` toward `origin`, creating the perception of depth. `depth` should be a number between 
+0 and 1, indicating how much of the distance between each point and `origin` the perspective line should draw.
+Here's an example:
+
+    for x in range(-200, 200, 50):
+        fly(x, 0)
+        points = square_with_points(30)
+        add_perspective(points, [0, 100], 0.3)
 
 ## lines
 
