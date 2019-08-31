@@ -92,18 +92,18 @@ def fancy_star(inner_radius, outer_radius, number_of_points):
     x_origin, y_origin = position()
     points = []
     fly(x_origin, y_origin + inner_radius)
-    points.append(position)
+    points.append(position())
     for point in range(number_of_points):
         goto(
             x_origin + inner_radius * sin(tau * (point / number_of_points)), 
             y_origin + inner_radius * cos(tau * (point / number_of_points))
         )
-        points.append(position)
+        points.append(position())
         goto(
             x_origin + outer_radius * sin(tau * ((point + 0.5) / number_of_points)), 
             y_origin + outer_radius * cos(tau * ((point + 0.5) / number_of_points))
         )
-        points.append(position)
+        points.append(position())
     goto(x_origin, y_origin + inner_radius)
     fly(x_origin, y_origin)
     return points
