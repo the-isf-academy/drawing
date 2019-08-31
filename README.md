@@ -15,7 +15,7 @@ The `lines` module contains helpers that change how the turtle draws. Each of th
 which means that it changes the behavior of the code block which follows it. Think of these as temporarily
 changing the rules of the world. 
 
-### dashes
+### dashes()
 Causes the turtle to draw dashes. For example: 
 
     from drawing.lines import dashes
@@ -27,6 +27,8 @@ Causes the turtle to draw dashes. For example:
             forward(100)
             right(90)
 
+You may also call dashes with an optional spacing argument, like `with dashes(spacing=3)`.
+
 ### dots
 Causes the turtle to draw dots. For example:
 
@@ -36,6 +38,8 @@ Causes the turtle to draw dots. For example:
         for i in range(100):
             forward(i)
             right(20)
+
+You may also call dots with an optional spacing argument, like `with dots(spacing=25)`.
 
 ### rainbow
 Causes the turtle to draw in rainbow colors. For example:
@@ -51,6 +55,9 @@ Causes the turtle to draw in rainbow colors. For example:
             x, y = position()
             sety(y - 10)
             pendown()
+
+You may also call `rainbow` with an optional spacing argument and/or an optional colors argument, 
+like `with rainbow(spacing=25, colors=["red", "green", "blue"])`.
 
 ## speed
 

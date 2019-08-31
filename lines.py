@@ -78,8 +78,11 @@ class dashes:
     A context manager which causes a code block to draw with dashes. 
     This is accomplished by briefly hacking the Turtle. Sorry!
     """
+    def __init__(self, spacing=20):
+        self.spacing = spacing
+    
     def __enter__(self):
-        Turtle.segmenter = Segmenter([(20, pendown), (20, penup)])
+        Turtle.segmenter = Segmenter([(self.spacing, pendown), (self.spacing, penup)])
         Turtle.true_go = Turtle._go
         Turtle._go = go_segmented
 
@@ -89,8 +92,11 @@ class dashes:
 
 class dots:
     "A context manager which causes a code block to draw with dots"
+    def __init__(self, spacing=10):
+        self.spacing = spacing
+    
     def __enter__(self):
-        Turtle.segmenter = Segmenter([(1, pendown), (10, penup)])
+        Turtle.segmenter = Segmenter([(1, pendown), (self.spacing, penup)])
         Turtle.true_go = Turtle._go
         Turtle._go = go_segmented
 
@@ -100,9 +106,15 @@ class dots:
 
 class rainbow:
     "A context manager which causes a code block to draw in rainbow colors"
+
+    default_colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple']
+    
+    def __init__(self, spacing=10, colors=None):
+        self.spacing = spacing
+        self.colors = colors or rainbow.default_colors
+
     def __enter__(self):
-        colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple']
-        Turtle.segmenter = Segmenter([(10, color_setter_factory(color)) for color in colors])
+        Turtle.segmenter = Segmenter([(self.spacing, color_setter_factory(color)) for color in self.colors])
         Turtle.true_go = Turtle._go
         Turtle._go = go_segmented
 
