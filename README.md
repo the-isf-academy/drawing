@@ -17,7 +17,6 @@ Draws the letter C with the given height, and returns the width of the letter.
 
 Using these letter functions, you can spell out words (It would be nice to have more letters!): 
 
-    :::python
     height = 100
     kerning = 10
     for letter_function in [block_a, block_b, block_c]:
