@@ -29,6 +29,8 @@ Using these letter functions, you can spell out words (It would be nice to have 
 `fancy_star` takes three arguments: `inner_radius`, `outer_radius`, and `number_of_points`. Then it draws
 a zig-zag between points on an inner and outer circle.
 
+![fancy star example](fancy_star.png)
+
 #### `drawing.shapes.square_with_points(size)`
 Works just like a regular square, but returns a list of the vertices. For example, 
 
