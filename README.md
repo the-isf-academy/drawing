@@ -6,13 +6,13 @@ This `package` contains several modules full of useful (or amusing) functions. H
 
 The `shapes` module contains functions which draw some fancy shapes. Enjoy!
 
-#### `drawing.shapes.block_a(height)`
+#### `block_a(height)`
 Draws the letter A with the given height, and returns the width of the letter.
 
-#### `drawing.shapes.block_b(height)`
+#### `block_b(height)`
 Draws the letter B with the given height, and returns the width of the letter.
 
-#### `drawing.shapes.block_c(height)`
+#### `block_c(height)`
 Draws the letter C with the given height, and returns the width of the letter.
 
 Using these letter functions, you can spell out words (It would be nice to have more letters!):
@@ -35,7 +35,7 @@ Using these letter functions, you can spell out words (It would be nice to have 
     block_b(100)
     input()
 
-#### `drawing.shapes.fancy_star(inner_radius, outer_radius, number_of_points)`
+#### `fancy_star(inner_radius, outer_radius, number_of_points)`
 `fancy_star` takes three arguments: `inner_radius`, `outer_radius`, and `number_of_points`. Then it draws
 a zig-zag between points on an inner and outer circle.
 
@@ -51,14 +51,14 @@ a zig-zag between points on an inner and outer circle.
     Now, can you think about how you might make this shape above?
 
 
-#### `drawing.shapes.square_with_points(size)`
+#### `square_with_points(size)`
 Works just like a regular square, but returns a list of the vertices. For example,
 
     >>> points = square_with_points(100)
     >>> points
     [(-0.00,-0.00), (100.00,0.00), (100.00,-100.00), (0.00,-100.00)]
 
-#### `drawing.shapes.add_perspective(points, origin, depth)`
+#### `add_perspective(points, origin, depth)`
 Projects `points` toward `origin`, creating the perception of depth. `depth` should be a number between
 0 and 1, indicating how much of the distance between each point and `origin` the perspective line should draw.
 Here's an example:
@@ -84,7 +84,7 @@ The `lines` module contains helpers that change how the turtle draws. Each of th
 which means that it changes the behavior of the code block which follows it. Think of these as temporarily
 changing the rules of the world.
 
-#### `drawing.lines.dashes(spacing=20)`
+#### `dashes(spacing=20)`
 Causes the turtle to draw dashes. `spacing=20` above means `spacing` is an optional argument. If you don't
 include it, `spacing` will be set to `20`. For example:
 
@@ -101,7 +101,7 @@ include it, `spacing` will be set to `20`. For example:
 
 You may also call dashes with an optional spacing argument, like `with dashes(spacing=3)`.
 
-#### `drawing.lines.dots(spacing=10)`
+#### `dots(spacing=10)`
 Causes the turtle to draw dots. For example:
 
 <img src="./images/dots.png" width="50%">.
@@ -116,7 +116,7 @@ Causes the turtle to draw dots. For example:
 
 You may also call dots with an optional spacing argument, like `with dots(spacing=25)`.
 
-#### `drawing.lines.rainbow(spacing=10, colors=None)`
+#### `rainbow(spacing=10, colors=None)`
 Causes the turtle to draw in rainbow colors. Both `spacing` and `colors` are optional; if you call
 `rainbow()` with no arguments, you'll get a nice rainbow sequence. For example:
 
