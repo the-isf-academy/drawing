@@ -17,13 +17,21 @@ Draws the letter C with the given height, and returns the width of the letter.
 
 Using these letter functions, you can spell out words (It would be nice to have more letters!): 
 
-    height = 100
-    kerning = 10
-    for letter_function in [block_a, block_b, block_c]:
-        spacing = letter_function(height)
+![letter_example](letters.png)
+
+    def move_space():
         penup()
-        forward(spacing + kerning)
+        forward(75)
         pendown()
+
+    shapes.block_a(100)
+    move_space()
+    shapes.block_c(100)
+    move_space()
+    shapes.block_a(100)
+    move_space()
+    shapes.block_b(100)
+    input()
 
 #### `drawing.shapes.fancy_star(inner_radius, outer_radius, number_of_points)`
 `fancy_star` takes three arguments: `inner_radius`, `outer_radius`, and `number_of_points`. Then it draws
