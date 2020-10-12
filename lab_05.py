@@ -1,4 +1,4 @@
-# Use this file to expertiment with the drawing package!
+# Use this file to experiment with the drawing package!
 
 
 input()
