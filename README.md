@@ -149,15 +149,12 @@ The `movement` module contains various functions related to speed and location t
 
 #### `update_position(x, y=None)`
 `update_position` updates the turtle's position, adding x to the turtle's current x and y to the turtle's current y. This may be called in two different ways:
-- update_position(10, 20)
-- update_position([10, 20])
 
 
+    from movement import update_position
 
-        from movement import update_position
-
-        update_position(10, 20)
-        update_position([10, 20])
+    update_position(10, 20) # Option 1
+    update_position([10, 20]) # Option 2
 
 
 
