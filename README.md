@@ -175,7 +175,7 @@ is a context manager which changes how a code block runs. For example:
 `restore_state_when_finished` is a context manager which records the turtle's position and heading at the beginning and restores them at the end of the code block.
 
     from turtle import forward, right
-    from movement import no_delay
+    from movement import restore_state_when_finished
 
     with restore_state_when_finished():
         for i in range(50):
