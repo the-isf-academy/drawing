@@ -66,7 +66,7 @@ Here's an example:
 ![perspective example](./images/perspective.png)
 
     from shapes import square_with_points, add_perspective
-    from helpers import fly
+    from movement import fly
 
     for x in range(-200, 200, 50):
         fly(x, 0)
